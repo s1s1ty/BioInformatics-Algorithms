@@ -4,7 +4,7 @@ Global alignment of string a to b
 '''
 def neddle(str1, str2, score):
     m, n = len(str1), len(str2)
-    dp = [[0 for j in range(n + 1)] for i in range(m + 1)]
+    dp = [[0 for _ in range(n + 1)] for _ in range(m + 1)]
 
     for i in range(1, m + 1): dp[i][0] = i * score["gap"]
     for j in range(1, n + 1): dp[0][j] = j * score["gap"]
